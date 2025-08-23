@@ -1,0 +1,36 @@
+/* 自定义样式 */
+:root {
+  --vp-c-brand: #667eea;
+  --vp-c-brand-light: #764ba2;
+}
+
+/* 确保音乐播放器在其他元素之上 */
+.music-player {
+  z-index: 9999 !important;
+}
+
+/* 全局音乐播放器容器样式 */
+#global-music-player-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+/* 为页面内容添加一些底部间距，避免被播放器遮挡 */
+.VPDoc {
+  padding-bottom: 80px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .VPDoc {
+    padding-bottom: 60px;
+  }
+  
+  #global-music-player-container {
+    bottom: 10px;
+    right: 10px;
+  }
+} 

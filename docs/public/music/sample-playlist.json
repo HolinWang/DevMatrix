@@ -1,0 +1,39 @@
+{
+  "playlist": [
+    {
+      "title": "宁静的夜晚",
+      "artist": "自然之声",
+      "url": "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+      "cover": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop",
+      "duration": "0:05"
+    },
+    {
+      "title": "雨声轻柔",
+      "artist": "自然之声",
+      "url": "https://www.soundjay.com/misc/sounds/rain-01.wav",
+      "cover": "https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=100&h=100&fit=crop",
+      "duration": "0:10"
+    },
+    {
+      "title": "森林漫步",
+      "artist": "自然之声",
+      "url": "https://www.soundjay.com/misc/sounds/birds-1.wav",
+      "cover": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=100&h=100&fit=crop",
+      "duration": "0:08"
+    },
+    {
+      "title": "海浪声",
+      "artist": "自然之声",
+      "url": "https://www.soundjay.com/misc/sounds/ocean-wave-1.wav",
+      "cover": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=100&h=100&fit=crop",
+      "duration": "0:12"
+    },
+    {
+      "title": "风声",
+      "artist": "自然之声",
+      "url": "https://www.soundjay.com/misc/sounds/wind-1.wav",
+      "cover": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop",
+      "duration": "0:15"
+    }
+  ]
+} 
