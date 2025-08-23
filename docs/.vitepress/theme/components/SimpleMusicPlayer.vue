@@ -110,10 +110,12 @@ export default {
   },
   mounted() {
     console.log('🎼 SimpleMusicPlayer 组件已挂载')
-    this.initGlobalAudio()
     
-    // 开发模式下的调试工具
+    // 确保只在客户端执行
     if (typeof window !== 'undefined') {
+      this.initGlobalAudio()
+      
+      // 开发模式下的调试工具
       window.debugMusic = {
         clearState: () => {
           localStorage.removeItem('musicPlayerState')
@@ -153,6 +155,9 @@ export default {
   },
       methods: {
       initGlobalAudio() {
+        // 确保只在客户端执行
+        if (typeof window === 'undefined') return
+        
         if (this.audioInitialized) {
           console.log('🔄 音频已初始化，跳过重复初始化')
           return
@@ -197,6 +202,8 @@ export default {
       },
       
       togglePlay() {
+        if (typeof window === 'undefined') return
+        
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
           if (this.isPlaying) {
@@ -219,6 +226,8 @@ export default {
     },
     
           seek(event) {
+        if (typeof window === 'undefined') return
+        
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
           const rect = event.currentTarget.getBoundingClientRect()
@@ -228,6 +237,8 @@ export default {
       },
       
       updateVolume() {
+        if (typeof window === 'undefined') return
+        
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
           globalAudio.volume = this.volume / 100
@@ -243,6 +254,8 @@ export default {
       },
       
       savePlaybackState() {
+        if (typeof window === 'undefined') return
+        
         const state = {
           isPlaying: this.isPlaying,
           currentTime: this.currentTime,
@@ -253,6 +266,8 @@ export default {
       },
       
       restorePlaybackState() {
+        if (typeof window === 'undefined') return
+        
         const savedState = localStorage.getItem('musicPlayerState')
         if (savedState) {
           try {
@@ -294,6 +309,8 @@ export default {
       },
       
       autoPlay() {
+        if (typeof window === 'undefined') return
+        
         if (this.isPlaying) {
           console.log('🎵 音乐已在播放中')
           return
@@ -343,6 +360,8 @@ export default {
       },
       
       setupUserInteractionPlay() {
+        if (typeof window === 'undefined') return
+        
         console.log('👆 设置用户交互监听，等待用户点击/按键/触摸')
         
         const playOnInteraction = () => {
@@ -374,6 +393,8 @@ export default {
       },
       
       onLoadedMetadata() {
+        if (typeof window === 'undefined') return
+        
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
           this.duration = globalAudio.duration
@@ -381,6 +402,8 @@ export default {
       },
       
       onTimeUpdate() {
+        if (typeof window === 'undefined') return
+        
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
           this.currentTime = globalAudio.currentTime
@@ -388,6 +411,8 @@ export default {
       },
       
       onEnded() {
+        if (typeof window === 'undefined') return
+        
         // 单曲循环播放
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
@@ -397,10 +422,13 @@ export default {
       },
       
       onError() {
+        if (typeof window === 'undefined') return
         console.error('音频加载失败')
       },
       
       checkAutoPlay() {
+        if (typeof window === 'undefined') return
+        
         const savedState = localStorage.getItem('musicPlayerState')
         if (!savedState) {
           // 没有保存状态，执行自动播放
@@ -418,6 +446,8 @@ export default {
       },
       
       syncAudioState() {
+        if (typeof window === 'undefined') return
+        
         // 同步音频状态（当音频元素已存在时）
         const globalAudio = document.getElementById('global-audio')
         if (globalAudio) {
@@ -446,6 +476,9 @@ export default {
       },
       
       showGlobalHint() {
+        // 确保只在客户端执行
+        if (typeof window === 'undefined') return
+        
         // 创建全局提示元素
         let globalHint = document.getElementById('global-music-hint')
         if (!globalHint) {

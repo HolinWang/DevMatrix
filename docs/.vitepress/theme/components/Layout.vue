@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 使用默认主题的布局 -->
-    <VPContent>
+    <Layout>
       <template #aside-outline-before>
         <slot name="aside-outline-before" />
       </template>
@@ -59,7 +59,7 @@
       <template #nav-screen-content-after>
         <slot name="nav-screen-content-after" />
       </template>
-    </VPContent>
+    </Layout>
     
     <!-- 全局音乐播放器 -->
     <GlobalMusicPlayer />
@@ -67,13 +67,13 @@
 </template>
 
 <script>
-import { VPContent } from 'vitepress/theme'
+import { Layout as VPLayout } from 'vitepress/theme'
 import GlobalMusicPlayer from './GlobalMusicPlayer.vue'
 
 export default {
   name: 'CustomLayout',
   components: {
-    VPContent,
+    Layout: VPLayout,
     GlobalMusicPlayer
   }
 }

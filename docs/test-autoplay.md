@@ -31,6 +31,8 @@
 
 ## 技术实现
 
+<GlobalMusicPlayer />
+
 - 使用 `localStorage` 保存播放状态
 - 监听 `canplay` 事件确保音频加载完成
 - 处理浏览器自动播放策略限制

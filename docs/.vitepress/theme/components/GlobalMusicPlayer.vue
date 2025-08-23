@@ -16,7 +16,7 @@ export default {
   },
   mounted() {
     // 确保组件在所有页面都显示
-    console.log('GlobalMusicPlayer mounted on:', this.$route?.path || 'unknown page')
+    console.log('🎼 GlobalMusicPlayer mounted on:', this.$route?.path || 'unknown page')
   }
 }
 </script>

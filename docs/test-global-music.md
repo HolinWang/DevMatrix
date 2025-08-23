@@ -30,6 +30,8 @@
 
 ## 技术说明
 
+<GlobalMusicPlayer />
+
 这个全局音乐播放器使用了以下技术：
 
 - **localStorage**: 保存播放状态

@@ -64,3 +64,5 @@ features:
     link: /lessons/lesson-09
 ---
 
+<GlobalMusicPlayer />
+
