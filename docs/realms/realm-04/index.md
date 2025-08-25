@@ -11,12 +11,13 @@ title: 第四境 · 元婴期
 - **目标**：掌握高级工程化、测试和性能优化
 - **核心概念**：HTTP协议、缓存策略、SSR、测试、性能监控、Web安全
 - **修炼章节**：
-  - [修炼 19：法相凝结](/lessons/lesson-19/) - HTTP协议与CORS
-  - [修炼 20：不朽金身](/lessons/lesson-20/) - 缓存策略与CDN
-  - [修炼 21：分身显圣](/lessons/lesson-21/) - SSR与Next.js/Nuxt.js
-  - [修炼 22：缩地成寸](/lessons/lesson-22/) - 懒加载与代码分割
-  - [修炼 23：雷阵渡劫](/lessons/lesson-23/) - Jest单元测试
-  - [修炼 24：天眼断障](/lessons/lesson-24/) - 性能监控与优化
+  <!-- 暂时注释掉章节链接，避免死链接错误 -->
+  <!-- - [修炼 01：法相凝结](/lessons/lesson-19/) - HTTP协议与CORS -->
+  <!-- - [修炼 02：不朽金身](/lessons/lesson-20/) - 缓存策略与CDN -->
+  <!-- - [修炼 03：分身显圣](/lessons/lesson-21/) - SSR与Next.js/Nuxt.js -->
+  <!-- - [修炼 04：缩地成寸](/lessons/lesson-22/) - 懒加载与代码分割 -->
+  <!-- - [修炼 05：雷阵渡劫](/lessons/lesson-23/) - Jest单元测试 -->
+  <!-- - [修炼 06：天眼断障](/lessons/lesson-24/) - 性能监控与优化 -->
 
 ## 修炼要点
 

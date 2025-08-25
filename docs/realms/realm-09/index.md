@@ -11,12 +11,13 @@ title: 第九境 · 渡劫期
 - **目标**：掌握前沿技术和未来发展方向
 - **核心概念**：WebGPU、Web3.0、区块链、AR/VR、量子计算、AI、技术债务
 - **修炼章节**：
-  - [修炼 49：混沌神力](/lessons/lesson-49/) - WebGPU与GPU计算
-  - [修炼 50：虚空之门](/lessons/lesson-50/) - Web3.0与区块链
-  - [修炼 51：显圣诸天](/lessons/lesson-51/) - AR/VR技术
-  - [修炼 52：演算乾坤](/lessons/lesson-52/) - 量子计算与前端
-  - [修炼 53：心魔斩除](/lessons/lesson-53/) - 技术债务管理
-  - [修炼 54：创世之光](/lessons/lesson-54/) - AI与前端智能化
+  <!-- 暂时注释掉章节链接，避免死链接错误 -->
+  <!-- - [修炼 01：混沌神力](/lessons/lesson-49/) - WebGPU与GPU计算 -->
+  <!-- - [修炼 02：虚空之门](/lessons/lesson-50/) - Web3.0与区块链 -->
+  <!-- - [修炼 03：显圣诸天](/lessons/lesson-51/) - AR/VR技术 -->
+  <!-- - [修炼 04：演算乾坤](/lessons/lesson-52/) - 量子计算与前端 -->
+  <!-- - [修炼 05：心魔斩除](/lessons/lesson-53/) - 技术债务管理 -->
+  <!-- - [修炼 06：创世之光](/lessons/lesson-54/) - AI与前端智能化 -->
 
 ## 修炼要点
 

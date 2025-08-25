@@ -11,12 +11,13 @@ title: 第七境 · 合体期
 - **目标**：掌握编译原理、浏览器内核和高级优化技术
 - **核心概念**：AST、浏览器内核、Web Components、低代码、编译优化、DOM优化
 - **修炼章节**：
-  - [修炼 37：器灵参透](/lessons/lesson-37/) - Babel AST编译原理
-  - [修炼 38：渲染天道](/lessons/lesson-38/) - 浏览器内核与渲染
-  - [修炼 39：原生大道](/lessons/lesson-39/) - Web Components
-  - [修炼 40：创世法则](/lessons/lesson-40/) - 低代码平台开发
-  - [修炼 41：优化雷云](/lessons/lesson-41/) - 编译优化技术
-  - [修炼 42：DOM天劫](/lessons/lesson-42/) - 大规模DOM优化
+  <!-- 暂时注释掉章节链接，避免死链接错误 -->
+  <!-- - [修炼 01：器灵参透](/lessons/lesson-37/) - Babel AST编译原理 -->
+  <!-- - [修炼 02：渲染天道](/lessons/lesson-38/) - 浏览器内核与渲染 -->
+  <!-- - [修炼 03：原生大道](/lessons/lesson-39/) - Web Components -->
+  <!-- - [修炼 04：创世法则](/lessons/lesson-40/) - 低代码平台开发 -->
+  <!-- - [修炼 05：优化雷云](/lessons/lesson-41/) - 编译优化技术 -->
+  <!-- - [修炼 06：DOM天劫](/lessons/lesson-42/) - 大规模DOM优化 -->
 
 ## 修炼要点
 

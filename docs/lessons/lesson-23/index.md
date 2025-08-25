@@ -6,6 +6,6 @@ title: 修炼 23：现代框架对比
 
 # 修炼 23：现代框架对比
 
-[← 返回上一节](/lessons/lesson-22/) | [回首页](/)
+<!-- [← 返回上一节](/lessons/lesson-22/) | --> [回首页](/)
 
 对比 React/Vue/Svelte/Angular 的设计理念与适用场景。

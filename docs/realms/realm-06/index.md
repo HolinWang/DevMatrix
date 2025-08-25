@@ -11,12 +11,13 @@ title: 第六境 · 炼虚期
 - **目标**：掌握全栈开发、后端技术和云服务
 - **核心概念**：Node.js、GraphQL、Docker、BFF、CI/CD、数据库、云服务
 - **修炼章节**：
-  - [修炼 31：混元神柱](/lessons/lesson-31/) - Node.js后端开发
-  - [修炼 32：天道统御](/lessons/lesson-32/) - GraphQL API设计
-  - [修炼 33：洞天开辟](/lessons/lesson-33/) - Docker容器化
-  - [修炼 34：结界御乱](/lessons/lesson-34/) - BFF架构模式
-  - [修炼 35：飞升天梯](/lessons/lesson-35/) - CI/CD自动化
-  - [修炼 36：云台仙府](/lessons/lesson-36/) - AWS云服务
+  <!-- 暂时注释掉章节链接，避免死链接错误 -->
+  <!-- - [修炼 01：混元神柱](/lessons/lesson-31/) - Node.js后端开发 -->
+  <!-- - [修炼 02：天道统御](/lessons/lesson-32/) - GraphQL API设计 -->
+  <!-- - [修炼 03：洞天开辟](/lessons/lesson-33/) - Docker容器化 -->
+  <!-- - [修炼 04：结界御乱](/lessons/lesson-34/) - BFF架构模式 -->
+  <!-- - [修炼 05：飞升天梯](/lessons/lesson-35/) - CI/CD自动化 -->
+  <!-- - [修炼 06：云台仙府](/lessons/lesson-36/) - AWS云服务 -->
 
 ## 修炼要点
 
