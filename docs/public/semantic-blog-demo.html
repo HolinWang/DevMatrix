@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="张三的个人技术博客，分享Web开发、前端技术等内容">
+    <meta name="keywords" content="前端开发,HTML,CSS,JavaScript,技术博客">
+    <title>张三的技术博客 - 语义化HTML实战演示</title>
+    <style>
+        /* 基础样式，让页面看起来更美观 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: white;
+            padding: 1rem 0;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        article {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        article:hover {
+            transform: translateY(-5px);
+        }
+        
+        article header {
+            background: none;
+            color: #333;
+            text-align: left;
+            padding: 0;
+            margin-bottom: 1rem;
+            box-shadow: none;
+        }
+        
+        article h2 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-meta span {
+            background: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+        }
+        
+        article p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        aside {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            height: fit-content;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        aside h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        aside ul {
+            list-style: none;
+        }
+        
+        aside li {
+            margin-bottom: 0.8rem;
+        }
+        
+        aside a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.3rem 0;
+        }
+        
+        aside a:hover {
+            color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-radius: 15px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        footer nav ul {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        footer a {
+            color: #bdc3c7;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .tag:hover {
+            transform: scale(1.05);
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .author-info {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .subscribe-form {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .subscribe-form fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .subscribe-form legend {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .subscribe-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .subscribe-form input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .subscribe-form input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .subscribe-form button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .subscribe-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .demo-notice {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 演示说明 -->
+        <div class="demo-notice">
+            <h2>🎯 语义化HTML实战演示</h2>
+            <p>这是一个完整的语义化个人博客页面，展示了如何正确使用HTML语义标签构建现代化的网页。</p>
+        </div>
+
+        <!-- 页面头部 -->
+        <header>
+            <h1>张三的技术博客</h1>
+            <p>分享前端开发技术与心得 | 语义化HTML实践</p>
+        </header>
+
+        <!-- 主导航 -->
+        <nav>
+            <ul>
+                <li><a href="#home">🏠 首页</a></li>
+                <li><a href="#articles">📚 文章</a></li>
+                <li><a href="#about">👨‍💻 关于我</a></li>
+                <li><a href="#contact">📧 联系方式</a></li>
+            </ul>
+        </nav>
+
+        <!-- 主要内容区域 -->
+        <main>
+            <!-- 文章列表 -->
+            <section>
+                <h2 style="color: #667eea; margin-bottom: 1.5rem; font-size: 1.8rem;">📖 最新文章</h2>
+                
+                <!-- 第一篇文章 -->
+                <article>
+                    <header>
+                        <h2>语义化HTML的重要性与实践</h2>
+                        <div class="article-meta">
+                            <span>📅 2024年1月15日</span>
+                            <span>👤 作者：张三</span>
+                            <span>👁️ 阅读：1,234次</span>
+                        </div>
+                    </header>
+                    
+                    <p>语义化HTML是现代Web开发的基础，它不仅能让代码更加清晰易懂，还能提升网站的可访问性和SEO效果。通过使用正确的语义标签，我们可以让浏览器、搜索引擎和辅助技术更好地理解页面内容的结构和含义。</p>
+                    
+                    <p>在这个快速发展的Web技术时代，掌握语义化HTML已经成为每个前端开发者的必备技能。本文将深入探讨语义化HTML的核心概念、最佳实践以及在实际项目中的应用技巧。</p>
+                    
+                    <div>
+                        <span class="tag">HTML</span>
+                        <span class="tag">语义化</span>
+                        <span class="tag">前端</span>
+                        <span class="tag">可访问性</span>
+                    </div>
+                    
+                    <a href="#read-more" class="read-more">📖 阅读全文 →</a>
+                </article>
+
+                <!-- 第二篇文章 -->
+                <article>
+                    <header>
+                        <h2>CSS Grid布局完全指南</h2>
+                        <div class="article-meta">
+                            <span>📅 2024年1月10日</span>
+                            <span>👤 作者：张三</span>
+                            <span>👁️ 阅读：2,156次</span>
+                        </div>
+                    </header>
+                    
+                    <p>CSS Grid是一个强大的布局工具，它让我们能够创建复杂的二维布局，本文将详细介绍Grid的使用方法，包括网格容器、网格项目、网格线等核心概念，以及实际项目中的应用技巧。</p>
+                    
+                    <p>从基础的网格定义到高级的响应式布局，CSS Grid为我们提供了前所未有的布局控制能力。无论是简单的卡片布局还是复杂的仪表板界面，Grid都能轻松应对。</p>
+                    
+                    <div>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Grid</span>
+                        <span class="tag">布局</span>
+                        <span class="tag">响应式</span>
+                    </div>
+                    
+                    <a href="#read-more" class="read-more">📖 阅读全文 →</a>
+                </article>
+
+                <!-- 第三篇文章 -->
+                <article>
+                    <header>
+                        <h2>JavaScript异步编程最佳实践</h2>
+                        <div class="article-meta">
+                            <span>📅 2024年1月5日</span>
+                            <span>👤 作者：张三</span>
+                            <span>👁️ 阅读：3,421次</span>
+                        </div>
+                    </header>
+                    
+                    <p>异步编程是JavaScript中的重要概念，从回调函数到Promise，再到async/await，本文将深入探讨异步编程的演进历程和最佳实践，帮助你写出更优雅的异步代码。</p>
+                    
+                    <p>在现代Web开发中，异步操作无处不在。无论是API调用、文件操作还是用户交互，都需要我们掌握异步编程的技巧。本文将带你从基础概念到高级应用，全面掌握JavaScript异步编程。</p>
+                    
+                    <div>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">异步</span>
+                        <span class="tag">Promise</span>
+                        <span class="tag">async/await</span>
+                    </div>
+                    
+                    <a href="#read-more" class="read-more">📖 阅读全文 →</a>
+                </article>
+            </section>
+
+            <!-- 侧边栏 -->
+            <aside>
+                <!-- 作者信息 -->
+                <section class="author-info">
+                    <h3>👨‍💻 关于作者</h3>
+                    <p>张三，前端开发工程师，热爱技术分享，专注于现代Web开发技术。有5年前端开发经验，擅长React、Vue、TypeScript等技术栈。</p>
+                </section>
+
+                <!-- 分类导航 -->
+                <section>
+                    <h3>📂 文章分类</h3>
+                    <ul>
+                        <li><a href="#html">📄 HTML/CSS (15)</a></li>
+                        <li><a href="#javascript">⚡ JavaScript (23)</a></li>
+                        <li><a href="#react">⚛️ React (8)</a></li>
+                        <li><a href="#vue">🟢 Vue.js (12)</a></li>
+                        <li><a href="#tools">🛠️ 开发工具 (6)</a></li>
+                    </ul>
+                </section>
+
+                <!-- 热门标签 -->
+                <section>
+                    <h3>🏷️ 热门标签</h3>
+                    <div>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Vue</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Webpack</span>
+                    </div>
+                </section>
+
+                <!-- 订阅表单 -->
+                <section class="subscribe-form">
+                    <h3>📧 订阅更新</h3>
+                    <form>
+                        <fieldset>
+                            <legend>订阅我的博客</legend>
+                            <label for="email">邮箱地址：</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <button type="submit">📬 订阅</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </aside>
+        </main>
+
+        <!-- 页面底部 -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#privacy">🔒 隐私政策</a></li>
+                    <li><a href="#terms">📋 使用条款</a></li>
+                    <li><a href="#sitemap">🗺️ 网站地图</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 张三的技术博客. 保留所有权利.</p>
+            <p>🌟 本网站使用语义化HTML构建，确保最佳的可访问性体验。</p>
+        </footer>
+    </div>
+</body>
+</html> 

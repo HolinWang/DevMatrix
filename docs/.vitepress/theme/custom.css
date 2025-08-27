@@ -1,0 +1,123 @@
+/* 优化导航目录样式 - 支持明暗主题 */
+
+/* 侧边栏整体样式 */
+.VPNav .VPNavBar .content-body .VPNavBarMenu .VPNavBarMenuLink {
+  font-weight: 600;
+}
+
+/* 侧边栏项目 - 明暗主题适配 */
+.VPSidebar .VPSidebarItem .item .text {
+  transition: all 0.2s ease;
+  padding: 8px 12px;
+  margin: 2px 0;
+  font-weight: 500;
+  font-size: 0.95em;
+  border-left: 2px solid transparent;
+  background: transparent;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 明色主题样式 */
+:root {
+  --sidebar-text-color: #374151;
+  --sidebar-hover-bg: #f8fafc;
+  --sidebar-hover-color: #1f2937;
+  --sidebar-active-bg: #eff6ff;
+  --sidebar-active-color: #1d4ed8;
+  --sidebar-border-color: #3b82f6;
+}
+
+/* 暗色主题样式 */
+.dark {
+  --sidebar-text-color: #d1d5db;
+  --sidebar-hover-bg: #374151;
+  --sidebar-hover-color: #f9fafb;
+  --sidebar-active-bg: #1e3a8a;
+  --sidebar-active-color: #93c5fd;
+  --sidebar-border-color: #60a5fa;
+}
+
+/* 应用主题变量 */
+.VPSidebar .VPSidebarItem .item .text {
+  color: var(--sidebar-text-color);
+}
+
+/* 侧边栏项目悬停效果 */
+.VPSidebar .VPSidebarItem .item:hover .text {
+  background: var(--sidebar-hover-bg);
+  color: var(--sidebar-hover-color);
+  transform: translateX(3px);
+  border-left-color: var(--sidebar-border-color);
+}
+
+/* 当前页面高亮 */
+.VPSidebar .VPSidebarItem .item.is-active .text {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-active-color);
+  font-weight: 600;
+  border-left-color: var(--sidebar-border-color);
+}
+
+/* 图标样式优化 */
+.VPSidebar .VPSidebarItem .item .text {
+  font-size: 1em;
+}
+
+/* 图标特殊效果 */
+.VPSidebar .VPSidebarItem .item .text::before {
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+
+/* 悬停时图标效果 */
+.VPSidebar .VPSidebarItem .item:hover .text::before {
+  opacity: 1;
+}
+
+/* 当前页面图标效果 */
+.VPSidebar .VPSidebarItem .item.is-active .text::before {
+  opacity: 1;
+}
+
+/* 侧边栏滚动条 - 明暗主题适配 */
+.VPSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 3px;
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark .VPSidebar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* 响应式优化 */
+@media (max-width: 960px) {
+  .VPSidebar .VPSidebarItem .item .text {
+    padding: 10px 14px;
+    font-size: 0.9em;
+  }
+}
+
+/* 移除所有动画效果 */
+.VPSidebar .VPSidebarItem .item.is-active .text {
+  animation: none;
+} 

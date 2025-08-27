@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import GlobalMusicPlayer from './components/GlobalMusicPlayer.vue'
-import './styles/custom.css'
+import './custom.css'
 
 export default {
   ...DefaultTheme,

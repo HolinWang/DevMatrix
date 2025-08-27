@@ -14,102 +14,60 @@ export default defineConfig({
 
     sidebar: {
       '/realms/realm-01/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-01/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-02/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-03/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-04/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-05/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       '/lessons/lesson-06/': [
-        {
-          text: '第一境【炼气期】',
-          items: [
-            { text: '境目录', link: '/realms/realm-01/' },
-            { text: '修炼 01：炼气入门 - 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
-            { text: '修炼 02：呼吸吐纳 - CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
-            { text: '修炼 03：铸体要诀 - Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
-            { text: '修炼 04：经脉疏通 - JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
-            { text: '修炼 05：神识凝聚 - 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
-            { text: '修炼 06：天道循环 - 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
-          ]
-        }
+        { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
+        { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },
+        { text: '🏗️ Flexbox与Grid布局', link: '/lessons/lesson-03/#flexbox与grid布局' },
+        { text: '🔄 JavaScript基础语法', link: '/lessons/lesson-04/#javascript基础语法' },
+        { text: '🧠 闭包与作用域', link: '/lessons/lesson-05/#闭包与作用域' },
+        { text: '⚙️ 事件循环与异步编程', link: '/lessons/lesson-06/#事件循环与异步编程' }
       ],
       // 暂时注释掉其他境的配置，避免死链接错误
       /*
