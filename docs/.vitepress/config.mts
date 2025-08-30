@@ -17,10 +17,168 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '修炼录', link: '/' },
-      { text: '修炼秘籍', link: '/markdown-examples' },
+      { text: '修炼秘籍', link: '/ai-frontend-skills' },
     ],
+    
+    // 启用右侧目录
+    outline: {
+      level: [2, 3],
+      label: '📋 页面目录'
+    },
 
     sidebar: {
+      '/ai-frontend-skills': [
+        {
+          text: '🎯 技能体系概览',
+          items: [
+            { text: '⚡ 技术基础：前端与AI融合', link: '/ai-frontend-skills#tech-foundation' },
+            { text: '🚀 场景落地：AI驱动效能革命', link: '/ai-frontend-skills#scenario-application' },
+            { text: '📈 职业进阶：四阶段成长路线', link: '/ai-frontend-skills#career-advancement' },
+            { text: '🧠 竞争力构建：工具思维伦理', link: '/ai-frontend-skills#competitiveness' }
+          ]
+        },
+        {
+          text: '🛠️ 核心技术模块',
+          items: [
+            {
+              text: '💻 1.1 核心编程语言升级',
+              items: [
+                { text: '🔷 TypeScript 高级类型系统', link: '/ai-frontend-skills#typescript' },
+                { text: '🟨 JavaScript 与 AI 交互能力', link: '/ai-frontend-skills#javascript' }
+              ]
+            },
+            {
+              text: '🤖 1.2 前端 AI 框架生态',
+              items: [
+                { text: '🌐 WebLLM 实战技能', link: '/ai-frontend-skills#webllm' },
+                { text: '⚙️ Transformers.js 核心能力', link: '/ai-frontend-skills#transformers' },
+                { text: '📊 TensorFlow.js 应用开发', link: '/ai-frontend-skills#tensorflow' }
+              ]
+            },
+            {
+              text: '🔗 1.3 大模型交互架构',
+              items: [
+                { text: '📡 API 调用与状态管理', link: '/ai-frontend-skills#api' }
+              ]
+            },
+            {
+              text: '🔍 1.4 RAG 技术落地能力',
+              items: [
+                { text: '📝 文档向量化与存储', link: '/ai-frontend-skills#vectorization' },
+                { text: '📈 检索可视化实现', link: '/ai-frontend-skills#visualization' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '🚀 应用场景模块',
+          items: [
+            {
+              text: '⚡ 2.1 开发效率：AI辅助提效',
+              items: [
+                { text: '🎯 Prompt 工程核心技能', link: '/ai-frontend-skills#prompt' },
+                { text: '🤖 AI 代码生成工具 mastery', link: '/ai-frontend-skills#ai-codegen' },
+                { text: '🔧 低代码与 AI 融合', link: '/ai-frontend-skills#lowcode' }
+              ]
+            },
+            {
+              text: '⚡ 2.2 性能优化：智能决策',
+              items: [
+                { text: '🚀 智能预加载系统', link: '/ai-frontend-skills#preload' },
+                { text: '🎨 AI 布局优化', link: '/ai-frontend-skills#layout' }
+              ]
+            },
+            {
+              text: '🎨 2.3 用户体验：个性化融合',
+              items: [
+                { text: '📝 智能表单交互', link: '/ai-frontend-skills#form' },
+                { text: '🎭 多模态交互开发', link: '/ai-frontend-skills#multimodal' },
+                { text: '🎯 个性化推荐系统', link: '/ai-frontend-skills#recommendation' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '📈 成长路径模块',
+          items: [
+            {
+              text: '🌱 阶段 1：基础重塑（1个月）',
+              items: [
+                { text: '🌱 阶段 1：基础重塑（1个月）', link: '/ai-frontend-skills#stage-1' },
+                { text: '📋 核心技能清单', link: '/ai-frontend-skills#核心技能清单' },
+                { text: '📚 推荐学习资源', link: '/ai-frontend-skills#推荐学习资源' },
+                { text: '🎯 里程碑项目指标', link: '/ai-frontend-skills#里程碑项目指标' }
+              ]
+            },
+            {
+              text: '🚀 阶段 2：核心突破（2-3个月）',
+              items: [
+                { text: '🚀 阶段 2：核心突破（2-3个月）', link: '/ai-frontend-skills#stage-2' },
+                { text: '📋 核心技能清单', link: '/ai-frontend-skills#核心技能清单-1' },
+                { text: '📚 推荐学习资源', link: '/ai-frontend-skills#推荐学习资源-1' },
+                { text: '🎯 里程碑项目指标', link: '/ai-frontend-skills#里程碑项目指标-1' }
+              ]
+            },
+            {
+              text: '⚡ 阶段 3：高阶突围（3-6个月）',
+              items: [
+                { text: '⚡ 阶段 3：高阶突围（3-6个月）', link: '/ai-frontend-skills#stage-3' },
+                { text: '📋 核心技能清单', link: '/ai-frontend-skills#核心技能清单-2' },
+                { text: '📚 推荐学习资源', link: '/ai-frontend-skills#推荐学习资源-2' },
+                { text: '🎯 里程碑项目指标', link: '/ai-frontend-skills#里程碑项目指标-2' }
+              ]
+            },
+            {
+              text: '🌟 阶段 4：前沿融合（持续）',
+              items: [
+                { text: '🌟 阶段 4：前沿融合（持续）', link: '/ai-frontend-skills#stage-4' },
+                { text: '📋 核心技能清单', link: '/ai-frontend-skills#核心技能清单-3' },
+                { text: '📚 推荐学习资源', link: '/ai-frontend-skills#推荐学习资源-3' },
+                { text: '🎯 里程碑项目指标', link: '/ai-frontend-skills#里程碑项目指标-3' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '🧠 思维与工具模块',
+          items: [
+            {
+              text: '🛠️ 必备工具链深度掌握',
+              items: [
+                { text: '🛠️ 必备工具链深度掌握', link: '/ai-frontend-skills#toolchain' },
+                { text: '🌐 浏览器推理工具', link: '/ai-frontend-skills#browser-tools' },
+                { text: '🔍 监控与调试工具', link: '/ai-frontend-skills#debug-tools' },
+                { text: '⚡ 效率工具', link: '/ai-frontend-skills#efficiency-tools' }
+              ]
+            },
+            {
+              text: '🧠 思维模式转变训练',
+              items: [
+                { text: '🧠 思维模式转变训练', link: '/ai-frontend-skills#thinking' },
+                { text: '💭 提示式设计思维', link: '/ai-frontend-skills#prompt-thinking' },
+                { text: '🎲 概率性思维培养', link: '/ai-frontend-skills#probability-thinking' }
+              ]
+            },
+            {
+              text: '🛡️ 伦理与安全实践',
+              items: [
+                { text: '🛡️ 伦理与安全实践', link: '/ai-frontend-skills#ethics' },
+                { text: '🔒 数据隐私保护', link: '/ai-frontend-skills#privacy' },
+                { text: '⚖️ 算法公平性保障', link: '/ai-frontend-skills#fairness' },
+                { text: '📊 评估标准', link: '/ai-frontend-skills#evaluation' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '🗺️ 学习指南',
+          items: [
+            { text: '🗺️ 技能成长路径图', link: '/ai-frontend-skills#growth-path' },
+            { text: '💡 学习建议', link: '/ai-frontend-skills#learning-tips' },
+            { text: '📚 学习资源链接', link: '/ai-frontend-skills#learning-resources' }
+          ]
+        }
+      ],
       '/realms/realm-01/': [
         { text: '⚡ 语义HTML基础', link: '/lessons/lesson-01/#语义html基础' },
         { text: '🎨 CSS盒模型与布局', link: '/lessons/lesson-02/#css盒模型与布局' },

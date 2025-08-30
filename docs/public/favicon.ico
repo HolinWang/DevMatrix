@@ -1,1 +1,11 @@
- 
+<!-- 
+This is a placeholder favicon.ico file.
+In a real implementation, this would be a binary .ico file.
+
+To create a proper favicon.ico file:
+1. Use the favicon-generator.html tool in this directory
+2. Convert the generated PNG to ICO format using an online converter
+3. Replace this file with the actual binary .ico file
+
+For now, this placeholder prevents the 404 error.
+--> 
