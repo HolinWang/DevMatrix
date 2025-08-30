@@ -75,8 +75,8 @@ function createCultivator(name) {
   };
 }
 
-const cultivator = createCultivator('张三');
-console.log(cultivator.cultivate('炼气诀')); // 张三修炼炼气诀，境界提升到2
+const cultivator = createCultivator('HOLIN');
+console.log(cultivator.cultivate('炼气诀')); // HOLIN修炼炼气诀，境界提升到2
 ```
 
 #### 闭包陷阱

@@ -121,3 +121,191 @@
 .VPSidebar .VPSidebarItem .item.is-active .text {
   animation: none;
 } 
+
+/* 右侧目录美化样式 */
+.VPDocAside .content-container .content {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+/* 目录标题样式 */
+.VPDocAside .content-container .content .outline-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  position: relative;
+}
+
+.VPDocAside .content-container .content .outline-title::before {
+  content: "📋";
+  margin-right: 8px;
+}
+
+/* 目录链接样式 */
+.VPDocAside .content-container .content .outline-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #495057;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.VPDocAside .content-container .content .outline-link:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* 当前激活的链接 */
+.VPDocAside .content-container .content .outline-link.active {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* 不同层级的缩进和图标 */
+.VPDocAside .content-container .content .outline-link[data-level="2"] {
+  padding-left: 16px;
+}
+
+.VPDocAside .content-container .content .outline-link[data-level="2"]::before {
+  content: "📖";
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.VPDocAside .content-container .content .outline-link[data-level="3"] {
+  padding-left: 24px;
+}
+
+.VPDocAside .content-container .content .outline-link[data-level="3"]::before {
+  content: "📝";
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.VPDocAside .content-container .content .outline-link[data-level="4"] {
+  padding-left: 32px;
+}
+
+.VPDocAside .content-container .content .outline-link[data-level="4"]::before {
+  content: "🔹";
+  margin-right: 8px;
+  font-size: 10px;
+}
+
+/* 特殊章节的图标 */
+.VPDocAside .content-container .content .outline-link[href*="#概述"]::before {
+  content: "🎯";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#修炼要点"]::before {
+  content: "⚡";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#核心概念"]::before {
+  content: "🧠";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#盒模型组成"]::before {
+  content: "📦";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#盒模型类型"]::before {
+  content: "🔧";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#实战练习"]::before {
+  content: "🎨";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#在线练习"]::before {
+  content: "🚀";
+}
+
+.VPDocAside .content-container .content .outline-link[href*="#总结"]::before {
+  content: "✨";
+}
+
+/* 滚动条美化 */
+.VPDocAside .content-container .content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.VPDocAside .content-container .content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.VPDocAside .content-container .content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.VPDocAside .content-container .content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* 响应式设计 */
+@media (max-width: 960px) {
+  .VPDocAside .content-container .content {
+    padding: 16px;
+  }
+  
+  .VPDocAside .content-container .content .outline-link {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* 动画效果 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.VPDocAside .content-container .content .outline-link {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* 悬停时的图标动画 */
+.VPDocAside .content-container .content .outline-link:hover::before {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* 当前激活链接的图标动画 */
+.VPDocAside .content-container .content .outline-link.active::before {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 

@@ -288,15 +288,47 @@ title: 修炼 01：炼气入门 - 语义HTML基础
 
 #### 在线演示
 
-**[🎯 点击这里查看完整的语义化博客页面效果 →](./live-demo)** (在新窗口打开)
+<div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; border-left: 4px solid #3498db; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+  <h4 style="margin: 0 0 10px 0; color: #2c3e50;">💡 演示说明</h4>
+  <p style="margin: 0; color: #495057; font-size: 14px;">下面的演示展示了完整的语义化HTML博客页面效果，包含页面结构、导航、文章内容等。</p>
+</div>
 
-#### 代码下载
+<iframe 
+  src="/semantic-blog-demo.html" 
+  width="100%" 
+  height="800px"
+  frameborder="0"
+  style="border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); margin: 20px 0;"
+  title="语义化HTML博客页面演示">
+</iframe>
 
-**[📥 下载完整的HTML文件 →](./practice-demo)** (右键另存为)
+<div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #28a745;">
+  <p style="margin: 0; font-size: 14px; color: #495057;">
+    <strong>🎯 演示特点：</strong> 这个页面展示了完整的语义化HTML结构，包括header、nav、main、article、aside、footer等标签的正确使用。
+  </p>
+</div>
 
-#### 详细说明
+#### 代码展示
 
-**📖 查看详细代码说明：** [查看代码解析](./practice-demo) (在新窗口打开)
+<div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; border-left: 4px solid #f39c12; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+  <h4 style="margin: 0 0 10px 0; color: #2c3e50;">📝 代码说明</h4>
+  <p style="margin: 0; color: #495057; font-size: 14px;">下面是完整的HTML代码，展示了如何构建语义化的博客页面结构。</p>
+</div>
+
+<iframe 
+  src="/semantic-html-code-formatted.html" 
+  width="100%" 
+  height="800px"
+  frameborder="0"
+  style="border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); margin: 20px 0;"
+  title="语义化HTML代码展示">
+</iframe>
+
+<div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #17a2b8;">
+  <p style="margin: 0; font-size: 14px; color: #495057;">
+    <strong>💡 代码特点：</strong> 代码展示了语义化HTML的最佳实践，包括正确的标签使用、可访问性优化和SEO友好的结构。
+  </p>
+</div>
 
 ### 练习要点解析
 
@@ -329,5 +361,110 @@ title: 修炼 01：炼气入门 - 语义HTML基础
 3. **挑战任务**：添加更多语义化元素，如`&lt;figure&gt;`、`&lt;figcaption&gt;`、`&lt;blockquote&gt;`等
 
 这个示例展示了如何创建一个既美观又符合语义化标准的个人博客页面，是学习语义化HTML的绝佳实践案例！
+
+## 🔗 学习链接
+
+### 📚 官方文档
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #007acc; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🌐 MDN Web Docs</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">Mozilla开发者网络的HTML文档，最权威的Web技术参考。</p>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" style="color: #007acc; text-decoration: none; font-weight: bold;">📖 查看文档 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #e34c26; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">📋 W3C HTML规范</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">万维网联盟的HTML5官方规范文档。</p>
+    <a href="https://www.w3.org/TR/html52/" target="_blank" style="color: #e34c26; text-decoration: none; font-weight: bold;">📖 查看规范 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #f7df1e; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🎯 Web.dev</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">Google的Web开发最佳实践指南。</p>
+    <a href="https://web.dev/learn/html/" target="_blank" style="color: #f7df1e; text-decoration: none; font-weight: bold;">📖 学习指南 →</a>
+  </div>
+</div>
+
+### 🎓 学习资源
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #28a745; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">📖 菜鸟教程</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">中文HTML教程，适合初学者入门学习。</p>
+    <a href="https://www.runoob.com/html/html5-intro.html" target="_blank" style="color: #28a745; text-decoration: none; font-weight: bold;">📚 开始学习 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #17a2b8; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🎨 CSS-Tricks</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">CSS技巧和HTML最佳实践分享。</p>
+    <a href="https://css-tricks.com/guides/html/" target="_blank" style="color: #17a2b8; text-decoration: none; font-weight: bold;">🎯 查看技巧 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #6f42c1; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">♿ A11Y Project</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">Web可访问性最佳实践指南。</p>
+    <a href="https://www.a11yproject.com/" target="_blank" style="color: #6f42c1; text-decoration: none; font-weight: bold;">♿ 可访问性指南 →</a>
+  </div>
+</div>
+
+### 🛠️ 实用工具
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #dc3545; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🔍 HTML验证器</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">W3C官方HTML代码验证工具。</p>
+    <a href="https://validator.w3.org/" target="_blank" style="color: #dc3545; text-decoration: none; font-weight: bold;">🔍 验证代码 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #fd7e14; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🎯 Lighthouse</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">Google的性能、可访问性、SEO检测工具。</p>
+    <a href="https://developers.google.com/web/tools/lighthouse" target="_blank" style="color: #fd7e14; text-decoration: none; font-weight: bold;">🎯 性能检测 →</a>
+  </div>
+  
+  <div style="background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid #20c997; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h4 style="margin: 0 0 15px 0; color: #2c3e50;">📱 响应式测试</h4>
+    <p style="margin: 0 0 15px 0; color: #495057; font-size: 14px;">测试网站在不同设备上的显示效果。</p>
+    <a href="https://responsively.app/" target="_blank" style="color: #20c997; text-decoration: none; font-weight: bold;">📱 响应式测试 →</a>
+  </div>
+</div>
+
+### 📖 推荐书籍
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin: 30px 0;">
+  <h3 style="margin: 0 0 20px 0; text-align: center;">📚 深入学习推荐</h3>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px;">
+      <h4 style="margin: 0 0 10px 0;">《HTML5权威指南》</h4>
+      <p style="margin: 0; font-size: 14px; opacity: 0.9;">全面介绍HTML5的新特性和最佳实践</p>
+    </div>
+    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px;">
+      <h4 style="margin: 0 0 10px 0;">《Web标准设计》</h4>
+      <p style="margin: 0; font-size: 14px; opacity: 0.9;">深入理解Web标准和语义化设计</p>
+    </div>
+    <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px;">
+      <h4 style="margin: 0 0 10px 0;">《可访问性设计》</h4>
+      <p style="margin: 0; font-size: 14px; opacity: 0.9;">学习如何设计对所有人友好的网站</p>
+    </div>
+  </div>
+</div>
+
+### 🎯 下一步学习
+
+<div style="background: #f8f9fa; padding: 20px; border-radius: 12px; border: 1px solid #e9ecef; margin: 20px 0;">
+  <h4 style="margin: 0 0 15px 0; color: #2c3e50;">🚀 继续你的前端修炼之旅</h4>
+  <p style="margin: 0 0 15px 0; color: #495057;">掌握语义化HTML后，建议继续学习：</p>
+  <ul style="margin: 0; padding-left: 20px; color: #495057;">
+    <li><strong>CSS盒模型</strong>：理解元素布局的基础概念</li>
+    <li><strong>CSS Grid & Flexbox</strong>：现代布局技术</li>
+    <li><strong>JavaScript基础</strong>：为网页添加交互功能</li>
+    <li><strong>响应式设计</strong>：适配各种设备屏幕</li>
+    <li><strong>Web可访问性</strong>：让网站对所有人友好</li>
+  </ul>
+  <div style="margin-top: 20px; text-align: center;">
+    <a href="/lessons/lesson-02/" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">🎨 继续学习：CSS盒模型 →</a>
+  </div>
+</div>
 
 [← 返回第一境目录](/realms/realm-01/)

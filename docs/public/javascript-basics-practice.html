@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript基础语法实战练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f7df1e 0%, #f39c12 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .section-title {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .section-content {
+            padding: 20px;
+        }
+
+        .demo-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #e9ecef;
+        }
+
+        .demo-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .code-editor {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            overflow-x: auto;
+            white-space: pre;
+            line-height: 1.6;
+        }
+
+        .code-editor .keyword {
+            color: #e74c3c;
+        }
+
+        .code-editor .string {
+            color: #27ae60;
+        }
+
+        .code-editor .number {
+            color: #f39c12;
+        }
+
+        .code-editor .comment {
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        .run-button {
+            background: linear-gradient(135deg, #f7df1e 0%, #f39c12 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .run-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .output {
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            min-height: 100px;
+            white-space: pre-wrap;
+        }
+
+        .interactive-demo {
+            background: #fff;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .result-display {
+            background: #e8f5e8;
+            border: 1px solid #27ae60;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .error-display {
+            background: #fdf2f2;
+            border: 1px solid #e74c3c;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #c0392b;
+        }
+
+        .tips {
+            background: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .tips h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .tips p {
+            color: #0c5460;
+            margin-bottom: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .cultivator-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .cultivator-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .cultivator-info {
+            margin-bottom: 15px;
+        }
+
+        .cultivator-info p {
+            margin: 5px 0;
+            color: #495057;
+        }
+
+        .cultivator-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-button:hover {
+            background: #2980b9;
+        }
+
+        .action-button.success {
+            background: #27ae60;
+        }
+
+        .action-button.success:hover {
+            background: #229954;
+        }
+
+        .action-button.warning {
+            background: #f39c12;
+        }
+
+        .action-button.warning:hover {
+            background: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 JavaScript基础语法实战练习</h1>
+            <p>通过交互式演示学习JavaScript核心概念</p>
+        </div>
+
+        <div class="content">
+            <!-- 变量与数据类型 -->
+            <div class="section">
+                <div class="section-title">📦 变量与数据类型</div>
+                <div class="section-content">
+                    
+                    <div class="demo-container">
+                        <div class="demo-title">1. 变量声明演示</div>
+                        <div class="code-editor"><span class="comment">// 变量声明示例</span>
+<span class="keyword">let</span> name = <span class="string">'修仙者'</span>;
+<span class="keyword">const</span> age = <span class="number">25</span>;
+<span class="keyword">var</span> oldWay = <span class="string">'不推荐使用'</span>;
+
+<span class="comment">// 解构赋值</span>
+<span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+<span class="keyword">let</span> {name: userName, level} = {name: <span class="string">'HOLIN'</span>, level: <span class="string">'炼气期'</span>};
+
+<span class="comment">// 模板字符串</span>
+<span class="keyword">let</span> message = `欢迎${name}来到修仙世界，当前境界：${level}`;
+
+console.log(message);</div>
+                        <button class="run-button" onclick="runVariableDemo()">运行代码</button>
+                        <div class="output" id="variableOutput"></div>
+                    </div>
+
+                    <div class="demo-container">
+                        <div class="demo-title">2. 数据类型检查</div>
+                        <div class="interactive-demo">
+                            <div class="input-group">
+                                <label>输入值：</label>
+                                <input type="text" id="typeCheckInput" placeholder="输入任意值" oninput="checkDataType()">
+                            </div>
+                            <div class="result-display" id="typeCheckResult">等待输入...</div>
+                        </div>
+                    </div>
+
+                    <div class="tips">
+                        <h4>💡 学习要点</h4>
+                        <p>• let和const有块级作用域，var有函数作用域</p>
+                        <p>• const声明后不能重新赋值，但对象属性可以修改</p>
+                        <p>• 模板字符串使用反引号，支持变量插值</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 函数与作用域 -->
+            <div class="section">
+                <div class="section-title">🔧 函数与作用域</div>
+                <div class="section-content">
+                    
+                    <div class="demo-container">
+                        <div class="demo-title">3. 函数定义演示</div>
+                        <div class="code-editor"><span class="comment">// 函数声明</span>
+<span class="keyword">function</span> cultivate(technique) {
+    <span class="keyword">return</span> `修炼${technique}功法`;
+}
+
+<span class="comment">// 函数表达式</span>
+<span class="keyword">const</span> meditate = <span class="keyword">function</span>(time) {
+    <span class="keyword">return</span> `冥想${time}分钟`;
+};
+
+<span class="comment">// 箭头函数</span>
+<span class="keyword">const</span> breakthrough = (level) => `突破到${level}境界`;
+
+<span class="comment">// 默认参数</span>
+<span class="keyword">function</span> practice(technique = <span class="string">'基础功法'</span>, hours = <span class="number">1</span>) {
+    <span class="keyword">return</span> `修炼${technique}${hours}小时`;
+}
+
+console.log(cultivate(<span class="string">'炼气诀'</span>));
+console.log(meditate(<span class="number">30</span>));
+console.log(breakthrough(<span class="string">'筑基期'</span>));
+console.log(practice());</div>
+                        <button class="run-button" onclick="runFunctionDemo()">运行代码</button>
+                        <div class="output" id="functionOutput"></div>
+                    </div>
+
+                    <div class="demo-container">
+                        <div class="demo-title">4. 闭包演示</div>
+                        <div class="interactive-demo">
+                            <div class="input-group">
+                                <label>输入经验值：</label>
+                                <input type="number" id="expInput" value="50" min="0" max="200">
+                                <button class="run-button" onclick="gainExperience()">获得经验</button>
+                            </div>
+                            <div class="result-display" id="closureResult">当前等级：1，经验：0/100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 控制流程 -->
+            <div class="section">
+                <div class="section-title">🎛️ 控制流程</div>
+                <div class="section-content">
+                    
+                    <div class="demo-container">
+                        <div class="demo-title">5. 条件判断演示</div>
+                        <div class="interactive-demo">
+                            <div class="input-group">
+                                <label>输入等级：</label>
+                                <input type="number" id="levelInput" value="5" min="1" max="20" oninput="checkLevel()">
+                            </div>
+                            <div class="result-display" id="levelResult">等级：5 - 继续修炼炼气期</div>
+                        </div>
+                    </div>
+
+                    <div class="demo-container">
+                        <div class="demo-title">6. 循环和数组方法</div>
+                        <div class="code-editor"><span class="comment">// 数组操作演示</span>
+<span class="keyword">const</span> techniques = [<span class="string">'炼气'</span>, <span class="string">'筑基'</span>, <span class="string">'金丹'</span>, <span class="string">'元婴'</span>];
+
+<span class="comment">// forEach方法</span>
+console.log(<span class="string">'学习功法：'</span>);
+techniques.forEach((tech, index) => {
+    console.log(`${index + <span class="number">1</span>}. ${tech}功法`);
+});
+
+<span class="comment">// map方法</span>
+<span class="keyword">const</span> levels = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];
+<span class="keyword">const</span> powerLevels = levels.map(level => level * <span class="number">10</span>);
+console.log(<span class="string">'战力等级：'</span>, powerLevels);
+
+<span class="comment">// filter方法</span>
+<span class="keyword">const</span> highLevels = levels.filter(level => level >= <span class="number">3</span>);
+console.log(<span class="string">'高级等级：'</span>, highLevels);</div>
+                        <button class="run-button" onclick="runArrayDemo()">运行代码</button>
+                        <div class="output" id="arrayOutput"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数组与对象 -->
+            <div class="section">
+                <div class="section-title">📊 数组与对象</div>
+                <div class="section-content">
+                    
+                    <div class="demo-container">
+                        <div class="demo-title">7. 修仙者管理系统</div>
+                        <div class="grid-container">
+                            <div class="cultivator-card">
+                                <h3>修仙者信息</h3>
+                                <div class="cultivator-info" id="cultivatorInfo">
+                                    <p><strong>姓名：</strong>HOLIN</p>
+                                    <p><strong>等级：</strong>5</p>
+                                    <p><strong>境界：</strong>炼气期</p>
+                                    <p><strong>功法：</strong>炼气诀、御剑术</p>
+                                </div>
+                                <div class="cultivator-actions">
+                                    <button class="action-button" onclick="addTechnique()">学习功法</button>
+                                    <button class="action-button success" onclick="levelUp()">升级</button>
+                                    <button class="action-button warning" onclick="resetCultivator()">重置</button>
+                                </div>
+                            </div>
+                            
+                            <div class="cultivator-card">
+                                <h3>操作日志</h3>
+                                <div class="output" id="operationLog" style="height: 200px; overflow-y: auto;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-container">
+                        <div class="demo-title">8. 对象操作演示</div>
+                        <div class="code-editor"><span class="comment">// 对象创建和操作</span>
+<span class="keyword">let</span> cultivator = {
+    name: <span class="string">'HOLIN'</span>,
+    level: <span class="number">5</span>,
+    techniques: [<span class="string">'炼气诀'</span>, <span class="string">'御剑术'</span>],
+    cultivate: <span class="keyword">function</span>(hours) {
+        <span class="keyword">return</span> `${<span class="keyword">this</span>.name}修炼了${hours}小时`;
+    }
+};
+
+<span class="comment">// 对象解构</span>
+<span class="keyword">let</span> {name, level, techniques} = cultivator;
+console.log(<span class="string">'解构结果：'</span>, name, level, techniques);
+
+<span class="comment">// 对象展开运算符</span>
+<span class="keyword">let</span> newCultivator = {
+    ...cultivator,
+    level: <span class="number">6</span>,
+    newTechnique: <span class="string">'阵法'</span>
+};
+console.log(<span class="string">'新修仙者：'</span>, newCultivator);
+
+<span class="comment">// 方法调用</span>
+console.log(cultivator.cultivate(<span class="number">2</span>));</div>
+                        <button class="run-button" onclick="runObjectDemo()">运行代码</button>
+                        <div class="output" id="objectOutput"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 错误处理 -->
+            <div class="section">
+                <div class="section-title">🛡️ 错误处理</div>
+                <div class="section-content">
+                    
+                    <div class="demo-container">
+                        <div class="demo-title">9. 错误处理演示</div>
+                        <div class="interactive-demo">
+                            <div class="input-group">
+                                <label>输入突破等级：</label>
+                                <input type="number" id="breakthroughLevel" value="8" min="1" max="20">
+                                <button class="run-button" onclick="tryBreakthrough()">尝试突破</button>
+                            </div>
+                            <div class="result-display" id="breakthroughResult">等待尝试...</div>
+                        </div>
+                    </div>
+
+                    <div class="tips">
+                        <h4>💡 错误处理要点</h4>
+                        <p>• 使用try-catch捕获和处理错误</p>
+                        <p>• 可以创建自定义错误类</p>
+                        <p>• finally块总是会执行</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let cultivatorData = {
+            name: 'HOLIN',
+            level: 5,
+            techniques: ['炼气诀', '御剑术'],
+            exp: 0
+        };
+
+        let operationLog = [];
+
+        // 变量声明演示
+        function runVariableDemo() {
+            const output = document.getElementById('variableOutput');
+            output.innerHTML = '';
+            
+            try {
+                let name = '修仙者';
+                const age = 25;
+                var oldWay = '不推荐使用';
+                
+                let [a, b, c] = [1, 2, 3];
+                let {name: userName, level} = {name: 'HOLIN', level: '炼气期'};
+                
+                let message = `欢迎${name}来到修仙世界，当前境界：${level}`;
+                
+                output.innerHTML = `输出结果：
+${message}
+解构赋值结果：a=${a}, b=${b}, c=${c}
+对象解构：userName=${userName}, level=${level}`;
+            } catch (error) {
+                output.innerHTML = `错误：${error.message}`;
+            }
+        }
+
+        // 数据类型检查
+        function checkDataType() {
+            const input = document.getElementById('typeCheckInput').value;
+            const result = document.getElementById('typeCheckResult');
+            
+            if (input === '') {
+                result.innerHTML = '等待输入...';
+                return;
+            }
+            
+            let type = typeof input;
+            let additionalInfo = '';
+            
+            // 尝试转换为数字
+            if (!isNaN(input) && input !== '') {
+                type = 'number';
+                additionalInfo = ` (数值: ${Number(input)})`;
+            }
+            
+            // 检查是否为布尔值
+            if (input.toLowerCase() === 'true' || input.toLowerCase() === 'false') {
+                type = 'boolean';
+                additionalInfo = ` (布尔值: ${input.toLowerCase()})`;
+            }
+            
+            // 检查是否为数组
+            if (input.startsWith('[') && input.endsWith(']')) {
+                type = 'array';
+                additionalInfo = ' (数组格式)';
+            }
+            
+            // 检查是否为对象
+            if (input.startsWith('{') && input.endsWith('}')) {
+                type = 'object';
+                additionalInfo = ' (对象格式)';
+            }
+            
+            result.innerHTML = `输入值: "${input}"
+数据类型: ${type}${additionalInfo}`;
+        }
+
+        // 函数演示
+        function runFunctionDemo() {
+            const output = document.getElementById('functionOutput');
+            output.innerHTML = '';
+            
+            try {
+                function cultivate(technique) {
+                    return `修炼${technique}功法`;
+                }
+                
+                const meditate = function(time) {
+                    return `冥想${time}分钟`;
+                };
+                
+                const breakthrough = (level) => `突破到${level}境界`;
+                
+                function practice(technique = '基础功法', hours = 1) {
+                    return `修炼${technique}${hours}小时`;
+                }
+                
+                output.innerHTML = `函数调用结果：
+${cultivate('炼气诀')}
+${meditate(30)}
+${breakthrough('筑基期')}
+${practice()}`;
+            } catch (error) {
+                output.innerHTML = `错误：${error.message}`;
+            }
+        }
+
+        // 闭包演示
+        function createCultivator() {
+            let level = 1;
+            let exp = 0;
+            
+            return {
+                getLevel: () => level,
+                getExp: () => exp,
+                gainExp: (amount) => {
+                    exp += amount;
+                    if (exp >= 100) {
+                        level += 1;
+                        exp = 0;
+                        return `升级了！当前等级：${level}`;
+                    }
+                    return `获得经验${amount}，当前等级：${level}，经验：${exp}/100`;
+                }
+            };
+        }
+
+        const cultivator = createCultivator();
+
+        function gainExperience() {
+            const expInput = document.getElementById('expInput');
+            const result = document.getElementById('closureResult');
+            const exp = parseInt(expInput.value) || 0;
+            
+            const message = cultivator.gainExp(exp);
+            result.innerHTML = message;
+        }
+
+        // 等级检查
+        function checkLevel() {
+            const levelInput = document.getElementById('levelInput');
+            const result = document.getElementById('levelResult');
+            const level = parseInt(levelInput.value) || 0;
+            
+            let status;
+            if (level >= 10) {
+                status = '可以突破到筑基期';
+            } else if (level >= 5) {
+                status = '继续修炼炼气期';
+            } else {
+                status = '基础太差，需要补课';
+            }
+            
+            result.innerHTML = `等级：${level} - ${status}`;
+        }
+
+        // 数组演示
+        function runArrayDemo() {
+            const output = document.getElementById('arrayOutput');
+            output.innerHTML = '';
+            
+            try {
+                const techniques = ['炼气', '筑基', '金丹', '元婴'];
+                let result = '学习功法：\n';
+                
+                techniques.forEach((tech, index) => {
+                    result += `${index + 1}. ${tech}功法\n`;
+                });
+                
+                const levels = [1, 2, 3, 4, 5];
+                const powerLevels = levels.map(level => level * 10);
+                const highLevels = levels.filter(level => level >= 3);
+                
+                result += `\n战力等级：${powerLevels.join(', ')}\n`;
+                result += `高级等级：${highLevels.join(', ')}`;
+                
+                output.innerHTML = result;
+            } catch (error) {
+                output.innerHTML = `错误：${error.message}`;
+            }
+        }
+
+        // 对象演示
+        function runObjectDemo() {
+            const output = document.getElementById('objectOutput');
+            output.innerHTML = '';
+            
+            try {
+                let cultivator = {
+                    name: 'HOLIN',
+                    level: 5,
+                    techniques: ['炼气诀', '御剑术'],
+                    cultivate: function(hours) {
+                        return `${this.name}修炼了${hours}小时`;
+                    }
+                };
+                
+                let {name, level, techniques} = cultivator;
+                let newCultivator = {
+                    ...cultivator,
+                    level: 6,
+                    newTechnique: '阵法'
+                };
+                
+                output.innerHTML = `解构结果：${name}, ${level}, ${techniques.join(', ')}
+新修仙者：${JSON.stringify(newCultivator, null, 2)}
+方法调用：${cultivator.cultivate(2)}`;
+            } catch (error) {
+                output.innerHTML = `错误：${error.message}`;
+            }
+        }
+
+        // 修仙者管理
+        function addTechnique() {
+            const techniques = ['阵法', '符箓', '炼丹', '炼器', '御兽'];
+            const randomTech = techniques[Math.floor(Math.random() * techniques.length)];
+            
+            if (!cultivatorData.techniques.includes(randomTech)) {
+                cultivatorData.techniques.push(randomTech);
+                updateCultivatorDisplay();
+                addToLog(`学习了新功法：${randomTech}`);
+            } else {
+                addToLog(`已经学会了${randomTech}功法`);
+            }
+        }
+
+        function levelUp() {
+            cultivatorData.level += 1;
+            updateCultivatorDisplay();
+            addToLog(`升级了！当前等级：${cultivatorData.level}`);
+        }
+
+        function resetCultivator() {
+            cultivatorData = {
+                name: 'HOLIN',
+                level: 1,
+                techniques: ['炼气诀'],
+                exp: 0
+            };
+            updateCultivatorDisplay();
+            addToLog('重置修仙者数据');
+        }
+
+        function updateCultivatorDisplay() {
+            const info = document.getElementById('cultivatorInfo');
+            info.innerHTML = `
+                <p><strong>姓名：</strong>${cultivatorData.name}</p>
+                <p><strong>等级：</strong>${cultivatorData.level}</p>
+                <p><strong>境界：</strong>${getRealm(cultivatorData.level)}</p>
+                <p><strong>功法：</strong>${cultivatorData.techniques.join('、')}</p>
+            `;
+        }
+
+        function getRealm(level) {
+            if (level >= 10) return '筑基期';
+            if (level >= 5) return '炼气期';
+            return '凡人期';
+        }
+
+        function addToLog(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            operationLog.unshift(`[${timestamp}] ${message}`);
+            
+            if (operationLog.length > 10) {
+                operationLog.pop();
+            }
+            
+            const log = document.getElementById('operationLog');
+            log.innerHTML = operationLog.join('\n');
+        }
+
+        // 错误处理演示
+        function tryBreakthrough() {
+            const levelInput = document.getElementById('breakthroughLevel');
+            const result = document.getElementById('breakthroughResult');
+            const level = parseInt(levelInput.value) || 0;
+            
+            try {
+                if (level < 10) {
+                    throw new Error(`等级不足，需要10级才能突破，当前等级：${level}`);
+                }
+                result.innerHTML = `突破成功！从${level}级突破到${level + 1}级`;
+                result.className = 'result-display';
+            } catch (error) {
+                result.innerHTML = `突破失败：${error.message}`;
+                result.className = 'error-display';
+            }
+        }
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('JavaScript基础语法练习页面已加载');
+            updateCultivatorDisplay();
+            addToLog('修仙者系统初始化完成');
+            
+            // 初始化数据类型检查
+            checkDataType();
+        });
+    </script>
+</body>
+</html> 

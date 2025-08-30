@@ -4,12 +4,20 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "凡人修仙传：前端版",
   description: "A VitePress Site",
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iIzRhOTBlMiIgc3Ryb2tlPSIjMmMzZTUwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTQgOCBMMTggOCBMMTggMjQgTDE0IDI0IFoiIGZpbGw9IiNmMzljMTIiLz4KICA8cGF0aCBkPSJNMTIgNiBMMjAgNiBMMjAgOCBMMTIgOCBaIiBmaWxsPSIjZTc0YzNjIi8+CiAgPHBhdGggZD0iTTEzIDQgTDE5IDQgTDE5IDYgTDEzIDYgWiIgZmlsbD0iI2U3NGMzYyIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgZm9udC13ZWlnaHQ9ImJvbGQiPiZsdDsvJmd0OzwvdGV4dD4KICA8Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iOCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjgiIGN5PSIyNCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iMjQiIHI9IjEiIGZpbGw9IiNmMWM0MGYiLz4KPC9zdmc+' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon.png' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iIzRhOTBlMiIgc3Ryb2tlPSIjMmMzZTUwIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBkPSJNMTQgOCBMMTggOCBMMTggMjQgTDE0IDI0IFoiIGZpbGw9IiNmMzljMTIiLz4KICA8cGF0aCBkPSJNMTIgNiBMMjAgNiBMMjAgOCBMMTIgOCBaIiBmaWxsPSIjZTc0YzNjIi8+CiAgPHBhdGggZD0iTTEzIDQgTDE5IDQgTDE5IDYgTDEzIDYgWiIgZmlsbD0iI2U3NGMzYyIvPgogIDx0ZXh0IHg9IjE2IiB5PSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSI4IiBmaWxsPSJ3aGl0ZSIgZm9udC13ZWlnaHQ9ImJvbGQiPiZsdDsvJmd0OzwvdGV4dD4KICA8Y2lyY2xlIGN4PSI4IiBjeT0iOCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iOCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjgiIGN5PSIyNCIgcj0iMSIgZmlsbD0iI2YxYzQwZiIvPgogIDxjaXJjbGUgY3g9IjI0IiBjeT0iMjQiIHI9IjEiIGZpbGw9IiNmMWM0MGYiLz4KPC9zdmc+' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#4a90e2' }],
+    ['meta', { name: 'theme-color', content: '#4a90e2' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '修炼录', link: '/' },
       { text: '修炼秘籍', link: '/markdown-examples' },
-      { text: '音乐播放器', link: '/music-player-guide' }
     ],
 
     sidebar: {

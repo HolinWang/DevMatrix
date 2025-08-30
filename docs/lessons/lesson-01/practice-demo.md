@@ -14,9 +14,9 @@ title: 语义化HTML实战演示
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="张三的个人技术博客，分享Web开发、前端技术等内容">
+    <meta name="description" content="HOLIN的个人技术博客，分享Web开发、前端技术等内容">
     <meta name="keywords" content="前端开发,HTML,CSS,JavaScript,技术博客">
-    <title>张三的技术博客 - 前端开发分享</title>
+    <title>HOLIN的技术博客 - 前端开发分享</title>
     <style>
         /* 基础样式，让页面看起来更美观 */
         * {
@@ -183,7 +183,7 @@ title: 语义化HTML实战演示
 <body>
     <!-- 页面头部 -->
     <header>
-        <h1>张三的技术博客</h1>
+        <h1>HOLIN的技术博客</h1>
         <p>分享前端开发技术与心得</p>
     </header>
 
@@ -209,7 +209,7 @@ title: 语义化HTML实战演示
                     <h2>语义化HTML的重要性与实践</h2>
                     <div class="article-meta">
                         <time datetime="2024-01-15">2024年1月15日</time>
-                        <span>作者：张三</span>
+                        <span>作者：HOLIN</span>
                         <span>阅读：1,234次</span>
                     </div>
                 </header>
@@ -233,7 +233,7 @@ title: 语义化HTML实战演示
                     <h2>CSS Grid布局完全指南</h2>
                     <div class="article-meta">
                         <time datetime="2024-01-10">2024年1月10日</time>
-                        <span>作者：张三</span>
+                        <span>作者：HOLIN</span>
                         <span>阅读：2,156次</span>
                     </div>
                 </header>
@@ -257,7 +257,7 @@ title: 语义化HTML实战演示
                     <h2>JavaScript异步编程最佳实践</h2>
                     <div class="article-meta">
                         <time datetime="2024-01-05">2024年1月5日</time>
-                        <span>作者：张三</span>
+                        <span>作者：HOLIN</span>
                         <span>阅读：3,421次</span>
                     </div>
                 </header>
@@ -281,7 +281,7 @@ title: 语义化HTML实战演示
             <!-- 作者信息 -->
             <section>
                 <h3>关于作者</h3>
-                <p>张三，前端开发工程师，热爱技术分享，专注于现代Web开发技术。有5年前端开发经验，擅长React、Vue、TypeScript等技术栈。</p>
+                <p>HOLIN，前端开发工程师，热爱技术分享，专注于现代Web开发技术。有5年前端开发经验，擅长React、Vue、TypeScript等技术栈。</p>
             </section>
 
             <!-- 分类导航 -->
@@ -333,7 +333,7 @@ title: 语义化HTML实战演示
                 <li><a href="#sitemap">网站地图</a></li>
             </ul>
         </nav>
-        <p>&copy; 2024 张三的技术博客. 保留所有权利.</p>
+        <p>&copy; 2024 HOLIN的技术博客. 保留所有权利.</p>
         <p>本网站使用语义化HTML构建，确保最佳的可访问性体验。</p>
     </footer>
 </body>

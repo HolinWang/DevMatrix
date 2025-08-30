@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #357abd;
+        }
+        .download-link {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        .download-link:hover {
+            background: #229954;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>凡人修仙传：前端版 - Favicon 生成器</h1>
+        <p>这个工具可以帮助你生成网站的 favicon.ico 文件。</p>
+        
+        <h2>预览</h2>
+        <canvas id="faviconCanvas" width="32" height="32"></canvas>
+        
+        <h2>操作</h2>
+        <button onclick="generateFavicon()">生成 Favicon</button>
+        <button onclick="downloadFavicon()">下载 Favicon.ico</button>
+        
+        <div id="downloadArea"></div>
+        
+        <h2>使用说明</h2>
+        <ol>
+            <li>点击"生成 Favicon"按钮生成图标</li>
+            <li>点击"下载 Favicon.ico"下载文件</li>
+            <li>将下载的文件重命名为 favicon.ico</li>
+            <li>将文件放在 docs/public/ 目录下</li>
+        </ol>
+    </div>
+
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 清空画布
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // 绘制背景圆形
+            ctx.beginPath();
+            ctx.arc(16, 16, 15, 0, 2 * Math.PI);
+            ctx.fillStyle = '#4a90e2';
+            ctx.fill();
+            ctx.strokeStyle = '#2c3e50';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // 绘制剑身
+            ctx.fillStyle = '#f39c12';
+            ctx.fillRect(14, 8, 4, 16);
+            
+            // 绘制剑柄
+            ctx.fillStyle = '#e74c3c';
+            ctx.fillRect(12, 6, 8, 2);
+            ctx.fillRect(13, 4, 6, 2);
+            
+            // 绘制代码符号
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 8px monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText('</>', 16, 20);
+            
+            // 绘制装饰点
+            ctx.fillStyle = '#f1c40f';
+            ctx.beginPath();
+            ctx.arc(8, 8, 1, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(24, 8, 1, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(8, 24, 1, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(24, 24, 1, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        function downloadFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const dataURL = canvas.toDataURL('image/png');
+            
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = dataURL;
+            link.className = 'download-link';
+            link.textContent = '下载 PNG 格式';
+            
+            const downloadArea = document.getElementById('downloadArea');
+            downloadArea.innerHTML = '';
+            downloadArea.appendChild(link);
+            
+            // 自动下载
+            link.click();
+        }
+        
+        // 页面加载时自动生成
+        window.onload = function() {
+            generateFavicon();
+        };
+    </script>
+</body>
+</html> 

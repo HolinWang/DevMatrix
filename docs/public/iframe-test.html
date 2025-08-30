@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe测试页面</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .test-container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .status {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .test-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        .test-button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🎯 iframe功能测试</h1>
+        
+        <div class="status success">
+            ✅ iframe加载成功！
+        </div>
+        
+        <div class="status info">
+            📋 这个页面用于测试iframe在VitePress中的显示效果
+        </div>
+        
+        <p>如果你能看到这个页面，说明iframe功能正常工作。</p>
+        
+        <div>
+            <button class="test-button" onclick="testAlert()">测试JavaScript</button>
+            <button class="test-button" onclick="testConsole()">测试Console</button>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>测试信息</h3>
+            <p><strong>当前时间：</strong> <span id="current-time"></span></p>
+            <p><strong>用户代理：</strong> <span id="user-agent"></span></p>
+            <p><strong>屏幕尺寸：</strong> <span id="screen-size"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // 更新当前时间
+        function updateTime() {
+            document.getElementById('current-time').textContent = new Date().toLocaleString('zh-CN');
+        }
+        
+        // 显示用户代理信息
+        document.getElementById('user-agent').textContent = navigator.userAgent;
+        
+        // 显示屏幕尺寸
+        document.getElementById('screen-size').textContent = `${screen.width} x ${screen.height}`;
+        
+        // 每秒更新时间
+        setInterval(updateTime, 1000);
+        updateTime();
+        
+        // 测试函数
+        function testAlert() {
+            alert('JavaScript功能正常！');
+        }
+        
+        function testConsole() {
+            console.log('Console功能正常！');
+            console.log('当前时间:', new Date());
+            console.log('页面URL:', window.location.href);
+        }
+        
+        // 页面加载完成后的回调
+        window.addEventListener('load', function() {
+            console.log('iframe测试页面加载完成');
+            console.log('页面标题:', document.title);
+            console.log('页面URL:', window.location.href);
+        });
+    </script>
+</body>
+</html> 

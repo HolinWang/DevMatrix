@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语义化HTML代码展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Courier New', monospace;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .code-section {
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+        }
+
+        .section-title {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .code-block {
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+
+        .code-block .tag {
+            color: #e74c3c;
+        }
+
+        .code-block .attr {
+            color: #f39c12;
+        }
+
+        .code-block .value {
+            color: #27ae60;
+        }
+
+        .code-block .comment {
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        .explanation {
+            background: #e8f5e8;
+            padding: 20px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+        }
+
+        .explanation h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .explanation ul {
+            margin-left: 20px;
+        }
+
+        .explanation li {
+            margin-bottom: 5px;
+            color: #495057;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .tips {
+            background: #d1ecf1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .tips h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .tips p {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 语义化HTML代码展示</h1>
+            <p>完整的语义化HTML博客页面代码结构与说明</p>
+        </div>
+
+        <div class="content">
+            <div class="explanation">
+                <h3>📖 代码说明</h3>
+                <p>这个页面展示了如何构建一个完整的语义化HTML博客页面，包含以下核心要素：</p>
+                <ul>
+                    <li><strong>页面结构标签</strong>：header、nav、main、aside、footer</li>
+                    <li><strong>内容结构标签</strong>：article、section、h1-h6</li>
+                    <li><strong>可访问性优化</strong>：alt属性、label标签、语义化表单</li>
+                    <li><strong>SEO优化</strong>：meta标签、合理的标题层级</li>
+                </ul>
+            </div>
+
+            <div class="code-section">
+                <div class="section-title">📄 完整的HTML结构</div>
+                <div class="code-block">
+<span class="comment">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"zh-CN"</span><span class="tag">&gt;</span>
+
+    <span class="comment">&lt;!-- 头部信息 --&gt;</span>
+    <span class="tag">&lt;head&gt;</span>
+        <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"viewport"</span> 
+              <span class="attr">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"description"</span> 
+              <span class="attr">content</span>=<span class="value">"HOLIN的个人技术博客，分享Web开发、前端技术等内容"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;title&gt;</span>HOLIN的技术博客 - 语义化HTML实战演示<span class="tag">&lt;/title&gt;</span>
+        <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> 
+              <span class="attr">href</span>=<span class="value">"styles.css"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;/head&gt;</span>
+
+    <span class="comment">&lt;!-- 页面主体 --&gt;</span>
+    <span class="tag">&lt;body&gt;</span>
+
+        <span class="comment">&lt;!-- 页面头部 --&gt;</span>
+        <span class="tag">&lt;header&gt;</span>
+            <span class="tag">&lt;h1&gt;</span>HOLIN的技术博客<span class="tag">&lt;/h1&gt;</span>
+            <span class="tag">&lt;p&gt;</span>分享Web开发、前端技术等内容<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;/header&gt;</span>
+
+        <span class="comment">&lt;!-- 导航菜单 --&gt;</span>
+        <span class="tag">&lt;nav&gt;</span>
+            <span class="tag">&lt;ul&gt;</span>
+                <span class="tag">&lt;li&gt;</span>
+                    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>首页<span class="tag">&lt;/a&gt;</span>
+                <span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span>
+                    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>文章<span class="tag">&lt;/a&gt;</span>
+                <span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span>
+                    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>关于<span class="tag">&lt;/a&gt;</span>
+                <span class="tag">&lt;/li&gt;</span>
+                <span class="tag">&lt;li&gt;</span>
+                    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>联系<span class="tag">&lt;/a&gt;</span>
+                <span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/nav&gt;</span>
+
+        <span class="comment">&lt;!-- 主要内容区域 --&gt;</span>
+        <span class="tag">&lt;main&gt;</span>
+
+            <span class="comment">&lt;!-- 文章列表区域 --&gt;</span>
+            <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="value">"articles"</span><span class="tag">&gt;</span>
+                <span class="tag">&lt;h2&gt;</span>最新文章<span class="tag">&lt;/h2&gt;</span>
+                
+                <span class="comment">&lt;!-- 第一篇文章 --&gt;</span>
+                <span class="tag">&lt;article&gt;</span>
+                    <span class="tag">&lt;header&gt;</span>
+                        <span class="tag">&lt;h3&gt;</span>
+                            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>
+                                语义化HTML的重要性
+                            <span class="tag">&lt;/a&gt;</span>
+                        <span class="tag">&lt;/h3&gt;</span>
+                        <span class="tag">&lt;time</span> <span class="attr">datetime</span>=<span class="value">"2024-01-15"</span><span class="tag">&gt;</span>
+                            2024年1月15日
+                        <span class="tag">&lt;/time&gt;</span>
+                    <span class="tag">&lt;/header&gt;</span>
+                    
+                    <span class="tag">&lt;p&gt;</span>
+                        语义化HTML是构建现代网站的基础，它不仅能让代码更易读，
+                        还能提升SEO效果和可访问性...
+                    <span class="tag">&lt;/p&gt;</span>
+                    
+                    <span class="tag">&lt;footer&gt;</span>
+                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>阅读更多<span class="tag">&lt;/a&gt;</span>
+                    <span class="tag">&lt;/footer&gt;</span>
+                <span class="tag">&lt;/article&gt;</span>
+
+                <span class="comment">&lt;!-- 第二篇文章 --&gt;</span>
+                <span class="tag">&lt;article&gt;</span>
+                    <span class="tag">&lt;header&gt;</span>
+                        <span class="tag">&lt;h3&gt;</span>
+                            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>
+                                CSS盒模型详解
+                            <span class="tag">&lt;/a&gt;</span>
+                        <span class="tag">&lt;/h3&gt;</span>
+                        <span class="tag">&lt;time</span> <span class="attr">datetime</span>=<span class="value">"2024-01-10"</span><span class="tag">&gt;</span>
+                            2024年1月10日
+                        <span class="tag">&lt;/time&gt;</span>
+                    <span class="tag">&lt;/header&gt;</span>
+                    
+                    <span class="tag">&lt;p&gt;</span>
+                        CSS盒模型是前端布局的核心概念，理解它对于创建精确的
+                        页面布局至关重要...
+                    <span class="tag">&lt;/p&gt;</span>
+                    
+                    <span class="tag">&lt;footer&gt;</span>
+                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>阅读更多<span class="tag">&lt;/a&gt;</span>
+                    <span class="tag">&lt;/footer&gt;</span>
+                <span class="tag">&lt;/article&gt;</span>
+            <span class="tag">&lt;/section&gt;</span>
+
+            <span class="comment">&lt;!-- 侧边栏 --&gt;</span>
+            <span class="tag">&lt;aside&gt;</span>
+                
+                <span class="comment">&lt;!-- 关于作者 --&gt;</span>
+                <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="value">"about"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;h3&gt;</span>关于作者<span class="tag">&lt;/h3&gt;</span>
+                    <span class="tag">&lt;p&gt;</span>
+                        HOLIN，前端开发工程师，专注于Web开发和用户体验设计。
+                    <span class="tag">&lt;/p&gt;</span>
+                <span class="tag">&lt;/section&gt;</span>
+
+                <span class="comment">&lt;!-- 文章分类 --&gt;</span>
+                <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="value">"categories"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;h3&gt;</span>文章分类<span class="tag">&lt;/h3&gt;</span>
+                    <span class="tag">&lt;ul&gt;</span>
+                        <span class="tag">&lt;li&gt;</span>
+                            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>HTML/CSS<span class="tag">&lt;/a&gt;</span>
+                        <span class="tag">&lt;/li&gt;</span>
+                        <span class="tag">&lt;li&gt;</span>
+                            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>JavaScript<span class="tag">&lt;/a&gt;</span>
+                        <span class="tag">&lt;/li&gt;</span>
+                        <span class="tag">&lt;li&gt;</span>
+                            <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>前端框架<span class="tag">&lt;/a&gt;</span>
+                        <span class="tag">&lt;/li&gt;</span>
+                    <span class="tag">&lt;/ul&gt;</span>
+                <span class="tag">&lt;/section&gt;</span>
+            <span class="tag">&lt;/aside&gt;</span>
+        <span class="tag">&lt;/main&gt;</span>
+
+        <span class="comment">&lt;!-- 页面底部 --&gt;</span>
+        <span class="tag">&lt;footer&gt;</span>
+            <span class="tag">&lt;p&gt;</span>&copy; 2024 HOLIN的技术博客. 保留所有权利.<span class="tag">&lt;/p&gt;</span>
+            <span class="tag">&lt;nav&gt;</span>
+                <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>隐私政策<span class="tag">&lt;/a&gt;</span>
+                <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>使用条款<span class="tag">&lt;/a&gt;</span>
+            <span class="tag">&lt;/nav&gt;</span>
+        <span class="tag">&lt;/footer&gt;</span>
+
+    <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </div>
+            </div>
+
+            <div class="tips">
+                <h3>💡 关键要点</h3>
+                <p><strong>1. 语义化标签的使用：</strong>使用<span class="highlight">header</span>、<span class="highlight">nav</span>、<span class="highlight">main</span>、<span class="highlight">article</span>、<span class="highlight">aside</span>、<span class="highlight">footer</span>等标签来构建页面结构。</p>
+                <p><strong>2. 可访问性优化：</strong>添加<span class="highlight">lang</span>属性、<span class="highlight">alt</span>属性、<span class="highlight">label</span>标签等。</p>
+                <p><strong>3. SEO优化：</strong>使用合理的标题层级、meta标签、语义化结构。</p>
+                <p><strong>4. 响应式设计：</strong>使用CSS Grid和媒体查询适配不同设备。</p>
+            </div>
+
+            <div class="code-section">
+                <div class="section-title">🎨 CSS样式要点</div>
+                <div class="code-block">
+<span class="comment">/* 基础样式重置 */</span>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+<span class="comment">/* 页面布局 */</span>
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+<span class="comment">/* 容器布局 */</span>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+<span class="comment">/* 响应式网格布局 */</span>
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+<span class="comment">/* 文章卡片样式 */</span>
+article {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+<span class="comment">/* 侧边栏样式 */</span>
+aside {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+<span class="comment">/* 导航样式 */</span>
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+<span class="comment">/* 移动端适配 */</span>
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+                </div>
+            </div>
+
+            <div class="code-section">
+                <div class="section-title">🔧 表单语义化示例</div>
+                <div class="code-block">
+<span class="comment">&lt;!-- 语义化表单结构 --&gt;</span>
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="value">"/submit"</span> <span class="attr">method</span>=<span class="value">"post"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;fieldset&gt;</span>
+        <span class="tag">&lt;legend&gt;</span>个人信息<span class="tag">&lt;/legend&gt;</span>
+        
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"form-group"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"username"</span><span class="tag">&gt;</span>用户名：<span class="tag">&lt;/label&gt;</span>
+            <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"username"</span> <span class="attr">name</span>=<span class="value">"username"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+        
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"form-group"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"email"</span><span class="tag">&gt;</span>邮箱：<span class="tag">&lt;/label&gt;</span>
+            <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"email"</span> <span class="attr">id</span>=<span class="value">"email"</span> <span class="attr">name</span>=<span class="value">"email"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/fieldset&gt;</span>
+    
+    <span class="tag">&lt;fieldset&gt;</span>
+        <span class="tag">&lt;legend&gt;</span>偏好设置<span class="tag">&lt;/legend&gt;</span>
+        
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"form-group"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;label&gt;</span>
+                <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"checkbox"</span> <span class="attr">name</span>=<span class="value">"newsletter"</span><span class="tag">&gt;</span>
+                订阅新闻
+            <span class="tag">&lt;/label&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/fieldset&gt;</span>
+    
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="value">"submit"</span><span class="tag">&gt;</span>提交<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>🚀 最佳实践总结</h3>
+                <ul>
+                    <li><strong>结构清晰：</strong>使用语义化标签构建清晰的页面结构</li>
+                    <li><strong>可访问性：</strong>确保页面对所有用户都友好</li>
+                    <li><strong>SEO优化：</strong>使用合理的标题层级和meta标签</li>
+                    <li><strong>响应式：</strong>适配不同屏幕尺寸的设备</li>
+                    <li><strong>性能优化：</strong>使用高效的CSS选择器和布局</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
